@@ -96,8 +96,8 @@ export interface Home extends BasePageConfig {
   /** Featured badge, which appears above the headline */
   featured: {
     display: boolean;
-    title: React.ReactNode;
-    href: string;
+    title?: React.ReactNode;
+    href?: string;
   };
   /** The sub text which appears below the headline */
   subline: React.ReactNode;
@@ -215,13 +215,13 @@ export interface About extends BasePageConfig {
  * Blog page configuration.
  * @description Configuration for the Blog page, including metadata and navigation label.
  */
-export interface Blog extends BasePageConfig {}
+export interface Blog extends BasePageConfig { }
 
 /**
  * Work/projects page configuration.
  * @description Configuration for the Work/Projects page, including metadata and navigation label.
  */
-export interface Work extends BasePageConfig {}
+export interface Work extends BasePageConfig { }
 
 /**
  * Gallery page configuration.

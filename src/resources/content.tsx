@@ -2,14 +2,14 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Youness",
+  lastName: "Eddabachi",
+  name: `Youness Eddabachi`,
+  role: "Développeur Web/Product Designer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "yeddabachi@gmail.com",
+  location: "Europe/Paris", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["Français", "Anglais", "Arabe"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -25,25 +25,19 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/YoungNess",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/youness-eddabachi",
     essential: true,
   },
   {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    name: "Portfolio",
+    icon: "globe",
+    link: "https://youness-cool-site-abcda.webflow.io",
     essential: true,
   },
   {
@@ -60,24 +54,14 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Étudiant en informatique passionné par le développement web et le design</>,
   featured: {
-    display: true,
-    title: (
-      <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
-        <Line background="brand-alpha-strong" vert height="20" />
-        <Text marginRight="4" onBackground="brand-medium">
-          Featured work
-        </Text>
-      </Row>
-    ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    display: false,
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+      Je suis Youness, étudiant en <Text as="span" size="xl" weight="strong">BUT MMI</Text>, passionné par le développement web <br /> et le product design. Je crée des expériences utilisateur intuitives et modernes.
+    </>
   ),
 };
 
@@ -102,9 +86,15 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Étudiant en BUT Métiers du Multimédia et de l'Internet, je suis passionné par le design graphique,
+        le développement web et la communication digitale. Mon parcours m'a permis d'acquérir une solide
+        expertise dans ces domaines, que ce soit en créant des visuels marquants, en développant des sites
+        web performants, ou en concevant des stratégies digitales efficaces.
+        <br /><br />
+        Mon approche est simple : allier créativité et rigueur pour produire des résultats qui dépassent
+        les attentes. Curieux et toujours en quête de nouveaux défis, je cherche constamment à affiner mes
+        compétences, que ce soit à travers le développement de nouveaux projets ou l'exploration de nouveaux
+        outils comme le motion design.
       </>
     ),
   },
@@ -113,41 +103,44 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "ECS Expertise Création Société",
+        timeframe: "2025",
+        role: "Développeur Web/CM - Stage",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Création et développement d'un site vitrine pour l'entreprise avec une approche SEO optimisée.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Conception et intégration d'une page vitrine SEO pour chaque réseau social.
+          </>,
+          <>
+            Développement complet d'un site international (HTML, CSS, JavaScript).
+          </>,
+          <>
+            Création et montage de vidéos promotionnelles pour les réseaux sociaux.
+          </>,
+          <>
+            Gestion de la communication digitale et optimisation de projets web.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Paris Com SUP (1 mois)",
+        timeframe: "2024",
+        role: "Développeur Web/CM",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Création de contenus graphiques avec la Suite Adobe (Photoshop, Illustrator).
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Conception et développement d'un site web en HTML et JavaScript.
+          </>,
+          <>
+            Gestion de la communication digitale, création de contenus engageants et analyse des performances.
+          </>,
+          <>
+            Collaboration avec des équipes pour l'optimisation des compétences techniques et organisationnelles.
           </>,
         ],
         images: [],
@@ -156,26 +149,26 @@ const about: About = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Formation",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "BUT MMI - Université Gustave Eiffel",
+        description: <>Bachelor Universitaire de Technologie - Métiers du Multimédia et de l'Internet (2019-2021)</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "BAC Technologique STI2D - Lycée Condorcet Montreuil",
+        description: <>Baccalauréat Sciences et Technologies de l'Industrie et du Développement Durable (2020-2023)</>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Compétences",
     skills: [
       {
-        title: "Figma",
+        title: "UI/UX Design - Figma",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Conception d'interfaces utilisateur intuitives et modernes avec Figma.</>
         ),
         tags: [
           {
@@ -183,50 +176,80 @@ const about: About = {
             icon: "figma",
           },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "Développement Web",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Développement d'applications web avec HTML, CSS, JavaScript, PHP, Spring Boot, Angular, et React Native.</>
         ),
         tags: [
+          {
+            name: "HTML",
+          },
+          {
+            name: "CSS",
+          },
           {
             name: "JavaScript",
             icon: "javascript",
           },
           {
-            name: "Next.js",
-            icon: "nextjs",
+            name: "PHP",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "Spring Boot",
           },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "Angular",
+          },
+          {
+            name: "React Native",
           },
         ],
+        images: [],
+      },
+      {
+        title: "Suite Adobe",
+        description: (
+          <>Maîtrise d'After Effects, Photoshop, et InDesign pour la création de contenus visuels.</>
+        ),
+        tags: [
+          {
+            name: "After Effects",
+          },
+          {
+            name: "Photoshop",
+          },
+          {
+            name: "InDesign",
+          },
+        ],
+        images: [],
+      },
+      {
+        title: "Bases de données",
+        description: (
+          <>Gestion et manipulation de bases de données MySQL.</>
+        ),
+        tags: [
+          {
+            name: "MySQL",
+          },
+        ],
+        images: [],
+      },
+      {
+        title: "3D Blender",
+        description: (
+          <>Création de modèles 3D et animations avec Blender.</>
+        ),
+        tags: [
+          {
+            name: "Blender",
+          },
+        ],
+        images: [],
       },
     ],
   },
@@ -253,50 +276,23 @@ const work: Work = {
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
+  title: `Galerie Design – ${person.name}`,
+  description: `Projets de design graphique et créations visuelles par ${person.name}`,
   images: [
     {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
+      src: "/images/gallery/pnl-magazine-cover.jpg",
+      alt: "Couverture du magazine THE PNL - Projet de magazine de mode consacré au groupe PNL",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
+      src: "/images/gallery/cloone-poster.jpg",
+      alt: "Affiche pour l'entreprise Cloone - Design moderne et percutant",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
+      src: "/images/gallery/nike-ad.jpg",
+      alt: "Publicité Nike créée avec After Effects - Animations modernes et dynamiques",
       orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
     },
   ],
 };

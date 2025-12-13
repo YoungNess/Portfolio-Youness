@@ -14,6 +14,7 @@ import {
   Row,
   Avatar,
   Line,
+  Carousel,
 } from "@once-ui-system/core";
 import { baseURL, about, person, work } from "@/resources";
 import { formatDate } from "@/utils/formatDate";
@@ -119,7 +120,13 @@ export default async function Project({
         </Row>
       </Row>
       {post.metadata.images.length > 0 && (
-        <Media priority aspectRatio="16 / 9" radius="m" alt="image" src={post.metadata.images[0]} />
+        <Carousel
+          sizes="(max-width: 960px) 100vw, 960px"
+          items={post.metadata.images.map((image) => ({
+            slide: image,
+            alt: post.metadata.title,
+          }))}
+        />
       )}
       <Column style={{ margin: "auto" }} as="article" maxWidth="xs">
         <CustomMDX source={post.content} />
