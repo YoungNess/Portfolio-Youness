@@ -1,23 +1,25 @@
 "use client";
 
-import { Media, MasonryGrid } from "@once-ui-system/core";
+import { Flex, Heading, Text } from "@once-ui-system/core";
 import { gallery } from "@/resources";
+import Carousel from "./Carousel";
 
 export default function GalleryView() {
   return (
-    <MasonryGrid columns={2} s={{ columns: 1 }}>
-      {gallery.images.map((image, index) => (
-        <Media
-          enlarge
-          priority={index < 10}
-          sizes="(max-width: 560px) 100vw, 50vw"
-          key={index}
-          radius="m"
-          aspectRatio={image.orientation === "horizontal" ? "16 / 9" : "3 / 4"}
-          src={image.src}
-          alt={image.alt}
-        />
+    <Flex direction="column" gap="xl" fillWidth>
+      {gallery.projects.map((project, index) => (
+        <Flex key={index} direction="column" gap="m" fillWidth>
+          <Flex direction="column" gap="s">
+            <Heading as="h2" variant="display-strong-s">
+              {project.name}
+            </Heading>
+            <Text variant="body-default-m" onBackground="neutral-weak">
+              {project.description}
+            </Text>
+          </Flex>
+          <Carousel images={project.images} />
+        </Flex>
       ))}
-    </MasonryGrid>
+    </Flex>
   );
 }

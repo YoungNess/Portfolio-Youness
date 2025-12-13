@@ -6,7 +6,7 @@ const person: Person = {
   lastName: "Eddabachi",
   name: `Youness Eddabachi`,
   role: "Développeur Web/Product Designer",
-  avatar: "/images/avatar.jpg",
+  avatar: "/images/profile-photo.jpg",
   email: "yeddabachi@gmail.com",
   location: "Europe/Paris", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["Français", "Anglais", "Arabe"], // optional: Leave the array empty if you don't want to display languages
@@ -276,23 +276,75 @@ const work: Work = {
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: `Galerie Design – ${person.name}`,
-  description: `Projets de design graphique et créations visuelles par ${person.name}`,
-  images: [
+  title: `Design UI/UX – ${person.name}`,
+  description: `Projets de design d'interface et d'expérience utilisateur par ${person.name}`,
+  projects: [
     {
-      src: "/images/gallery/pnl-magazine-cover.jpg",
-      alt: "Couverture du magazine THE PNL - Projet de magazine de mode consacré au groupe PNL",
-      orientation: "vertical",
+      name: "Projet BEEP",
+      description: "Maquette de site d'auto-école - Design UI/UX pour une plateforme de vérification de résultats de permis de conduire",
+      images: [
+        {
+          src: "/images/gallery/beep-1.png",
+          alt: "BEEP - Page d'accueil avec vérification des résultats de test en ligne",
+          orientation: "horizontal",
+        },
+        {
+          src: "/images/gallery/beep-2.png",
+          alt: "BEEP - Section commentaires de candidats satisfaits avec étoiles",
+          orientation: "horizontal",
+        },
+        {
+          src: "/images/gallery/beep-3.png",
+          alt: "BEEP - Guide des 3 étapes pour accéder aux résultats",
+          orientation: "horizontal",
+        },
+        {
+          src: "/images/gallery/beep-4.png",
+          alt: "BEEP - Footer avec newsletter et liens utiles",
+          orientation: "horizontal",
+        },
+        {
+          src: "/images/gallery/beep-5.png",
+          alt: "BEEP - Page Notre Mission expliquant l'objectif de la plateforme",
+          orientation: "horizontal",
+        },
+        {
+          src: "/images/gallery/beep-6.png",
+          alt: "BEEP - Dashboard candidat avec taux de réussite et liste des sessions",
+          orientation: "horizontal",
+        },
+      ],
     },
     {
-      src: "/images/gallery/cloone-poster.jpg",
-      alt: "Affiche pour l'entreprise Cloone - Design moderne et percutant",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/nike-ad.jpg",
-      alt: "Publicité Nike créée avec After Effects - Animations modernes et dynamiques",
-      orientation: "horizontal",
+      name: "Projet ECS",
+      description: "Site web pour ECS (Expertise Création Société) - Plateforme d'expertise et comptabilité au Maroc",
+      images: [
+        {
+          src: "/images/gallery/ecs-1.png",
+          alt: "ECS - Page d'accueil avec slogan 'Votre Partenaire en Expertise & Comptabilité au Maroc'",
+          orientation: "horizontal",
+        },
+        {
+          src: "/images/gallery/ecs-2.png",
+          alt: "ECS - Section services avec création d'entreprise et comptabilité simplifiée",
+          orientation: "horizontal",
+        },
+        {
+          src: "/images/gallery/ecs-3.png",
+          alt: "ECS - Présentation des services d'accompagnement pour la création d'entreprise",
+          orientation: "horizontal",
+        },
+        {
+          src: "/images/gallery/ecs-4.png",
+          alt: "ECS - Section tarification avec message '100% Transparence'",
+          orientation: "horizontal",
+        },
+        {
+          src: "/images/gallery/ecs-5.png",
+          alt: "ECS - Avantages adaptés à ECS Maroc avec transparence et support personnalisé",
+          orientation: "horizontal",
+        },
+      ],
     },
   ],
 };
