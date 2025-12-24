@@ -31,13 +31,7 @@ const social: Social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/in/youness-eddabachi",
-    essential: true,
-  },
-  {
-    name: "Portfolio",
-    icon: "globe",
-    link: "https://youness-cool-site-abcda.webflow.io",
+    link: "https://www.linkedin.com/in/youness-eddabachi-34698929b",
     essential: true,
   },
   {
