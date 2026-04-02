@@ -14,6 +14,7 @@ import {
   SpacingToken,
 } from "@once-ui-system/core";
 import { Footer, Header, RouteGuard, Providers } from "@/components";
+import { GrainOverlay, CustomCursor } from "@/components";
 import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
 
 export async function generateMetadata() {
@@ -73,18 +74,9 @@ export default async function RootLayout({
                     root.setAttribute('data-' + key, value);
                   });
                   
-                  // Resolve theme
-                  const resolveTheme = (themeValue) => {
-                    if (!themeValue || themeValue === 'system') {
-                      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-                    }
-                    return themeValue;
-                  };
-                  
-                  // Apply saved theme
-                  const savedTheme = localStorage.getItem('data-theme');
-                  const resolvedTheme = resolveTheme(savedTheme);
-                  root.setAttribute('data-theme', resolvedTheme);
+                  // Force light theme — editorial palette only works in light
+                  root.setAttribute('data-theme', 'light');
+                  localStorage.setItem('data-theme', 'light');
                   
                   // Apply any saved style overrides
                   const styleKeys = Object.keys(config);
@@ -163,6 +155,8 @@ export default async function RootLayout({
             </Flex>
           </Flex>
           <Footer />
+          <GrainOverlay />
+          <CustomCursor />
         </Column>
       </Providers>
     </Flex>
