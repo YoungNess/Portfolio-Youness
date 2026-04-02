@@ -19,6 +19,7 @@ import {
 import { baseURL, about, person, work } from "@/resources";
 import { formatDate } from "@/utils/formatDate";
 import { ScrollToHash, CustomMDX } from "@/components";
+import { RevealOnScroll } from "@/components/RevealOnScroll";
 import { Metadata } from "next";
 import { Projects } from "@/components/work/Projects";
 
@@ -100,7 +101,9 @@ export default async function Project({
         <Text variant="body-default-xs" onBackground="neutral-weak" marginBottom="12">
           {post.metadata.publishedAt && formatDate(post.metadata.publishedAt)}
         </Text>
-        <Heading variant="display-strong-m">{post.metadata.title}</Heading>
+        <RevealOnScroll variant="clipReveal">
+          <Heading variant="display-strong-m">{post.metadata.title}</Heading>
+        </RevealOnScroll>
       </Column>
       <Row marginBottom="32" horizontal="center">
         <Row gap="16" vertical="center">
@@ -119,15 +122,17 @@ export default async function Project({
           </Text>
         </Row>
       </Row>
-      {post.metadata.images.length > 0 && (
-        <Carousel
-          sizes="(max-width: 960px) 100vw, 960px"
-          items={post.metadata.images.map((image) => ({
-            slide: image,
-            alt: post.metadata.title,
-          }))}
-        />
-      )}
+      <RevealOnScroll variant="fadeUp">
+        {post.metadata.images.length > 0 && (
+          <Carousel
+            sizes="(max-width: 960px) 100vw, 960px"
+            items={post.metadata.images.map((image) => ({
+              slide: image,
+              alt: post.metadata.title,
+            }))}
+          />
+        )}
+      </RevealOnScroll>
       <Column style={{ margin: "auto" }} as="article" maxWidth="xs">
         <CustomMDX source={post.content} />
       </Column>
