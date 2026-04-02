@@ -4,16 +4,15 @@ import {
   Button,
   Avatar,
   Column,
-  Badge,
   Row,
   Schema,
   Meta,
   Line,
 } from "@once-ui-system/core";
 import { home, about, person, baseURL, routes } from "@/resources";
-import { Mailchimp } from "@/components";
+import { Mailchimp, RevealOnScroll } from "@/components";
+import { HeroSection } from "@/components/HeroSection";
 import { Projects } from "@/components/work/Projects";
-import { RevealOnScroll } from "@/components/RevealOnScroll";
 import { Posts } from "@/components/blog/Posts";
 
 export async function generateMetadata() {
@@ -42,58 +41,49 @@ export default function Home() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Column fillWidth horizontal="center" gap="m">
-        <Column maxWidth="s" horizontal="center" align="center">
-          {home.featured.display && (
-            <RevealOnScroll variant="fadeIn" delay={0}>
-              <Badge
-                background="brand-alpha-weak"
-                paddingX="12"
-                paddingY="4"
-                onBackground="neutral-strong"
-                textVariant="label-default-s"
-                arrow={false}
-                href={home.featured.href}
-              >
-                <Row paddingY="2">{home.featured.title}</Row>
-              </Badge>
-            </RevealOnScroll>
-          )}
-          <RevealOnScroll variant="clipReveal" delay={0.1}>
-            <Heading wrap="balance" variant="display-strong-l">
-              {home.headline}
-            </Heading>
-          </RevealOnScroll>
-          <RevealOnScroll variant="fadeUp" delay={0.3}>
-            <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
-              {home.subline}
+      <HeroSection
+        headline={
+          <Heading variant="display-strong-l" style={{ lineHeight: "1.1" }}>
+            {home.headline}
+          </Heading>
+        }
+        subline={
+          <Column gap="8">
+            <Text onBackground="neutral-weak" variant="body-default-l">
+              Développeur Web & Product Designer
             </Text>
-          </RevealOnScroll>
-          <RevealOnScroll variant="fadeUp" delay={0.5}>
-            <Button
-              id="about"
-              data-border="rounded"
-              href={about.path}
-              variant="secondary"
-              size="m"
-              weight="default"
-              arrowIcon
-            >
-              <Row gap="8" vertical="center" paddingRight="4">
-                {about.avatar.display && (
-                  <Avatar
-                    marginRight="8"
-                    style={{ marginLeft: "-0.75rem" }}
-                    src={person.avatar}
-                    size="m"
-                  />
-                )}
-                {about.title}
-              </Row>
-            </Button>
-          </RevealOnScroll>
-        </Column>
-      </Column>
+            <Text onBackground="neutral-weak" variant="body-default-l">
+              Étudiant en <Text as="span" variant="body-strong-l" onBackground="neutral-strong">BUT MMI</Text> — Université Gustave Eiffel
+            </Text>
+            <Text onBackground="neutral-weak" variant="body-default-l">
+              Je crée des expériences numériques intuitives et modernes.
+            </Text>
+          </Column>
+        }
+        cta={
+          <Button
+            id="about"
+            data-border="rounded"
+            href={about.path}
+            variant="secondary"
+            size="m"
+            weight="default"
+            arrowIcon
+          >
+            <Row gap="8" vertical="center" paddingRight="4">
+              {about.avatar.display && (
+                <Avatar
+                  marginRight="8"
+                  style={{ marginLeft: "-0.75rem" }}
+                  src={person.avatar}
+                  size="m"
+                />
+              )}
+              {about.title}
+            </Row>
+          </Button>
+        }
+      />
       <RevealOnScroll variant="fadeUp" delay={0}>
         <Projects range={[1, 1]} />
       </RevealOnScroll>
