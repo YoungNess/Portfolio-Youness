@@ -10,3 +10,5 @@ export { ThemeToggle } from "@/components/ThemeToggle";
 export { CustomMDX } from "@/components/mdx";
 export { GrainOverlay } from "@/components/GrainOverlay";
 export { CustomCursor } from "@/components/CustomCursor";
+export { RevealOnScroll } from "@/components/RevealOnScroll";
+export { StaggerItem } from "@/components/StaggerItem";
