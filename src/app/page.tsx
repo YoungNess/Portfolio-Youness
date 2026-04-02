@@ -3,7 +3,6 @@ import {
   Text,
   Button,
   Avatar,
-  RevealFx,
   Column,
   Badge,
   Row,
@@ -14,6 +13,7 @@ import {
 import { home, about, person, baseURL, routes } from "@/resources";
 import { Mailchimp } from "@/components";
 import { Projects } from "@/components/work/Projects";
+import { RevealOnScroll } from "@/components/RevealOnScroll";
 import { Posts } from "@/components/blog/Posts";
 
 export async function generateMetadata() {
@@ -45,13 +45,7 @@ export default function Home() {
       <Column fillWidth horizontal="center" gap="m">
         <Column maxWidth="s" horizontal="center" align="center">
           {home.featured.display && (
-            <RevealFx
-              fillWidth
-              horizontal="center"
-              paddingTop="16"
-              paddingBottom="32"
-              paddingLeft="12"
-            >
+            <RevealOnScroll variant="fadeIn" delay={0}>
               <Badge
                 background="brand-alpha-weak"
                 paddingX="12"
@@ -63,19 +57,19 @@ export default function Home() {
               >
                 <Row paddingY="2">{home.featured.title}</Row>
               </Badge>
-            </RevealFx>
+            </RevealOnScroll>
           )}
-          <RevealFx translateY="4" fillWidth horizontal="center" paddingBottom="16">
+          <RevealOnScroll variant="clipReveal" delay={0.1}>
             <Heading wrap="balance" variant="display-strong-l">
               {home.headline}
             </Heading>
-          </RevealFx>
-          <RevealFx translateY="8" delay={0.2} fillWidth horizontal="center" paddingBottom="32">
+          </RevealOnScroll>
+          <RevealOnScroll variant="fadeUp" delay={0.3}>
             <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
               {home.subline}
             </Text>
-          </RevealFx>
-          <RevealFx paddingTop="12" delay={0.4} horizontal="center" paddingLeft="12">
+          </RevealOnScroll>
+          <RevealOnScroll variant="fadeUp" delay={0.5}>
             <Button
               id="about"
               data-border="rounded"
@@ -97,12 +91,12 @@ export default function Home() {
                 {about.title}
               </Row>
             </Button>
-          </RevealFx>
+          </RevealOnScroll>
         </Column>
       </Column>
-      <RevealFx translateY="16" delay={0.6}>
+      <RevealOnScroll variant="fadeUp" delay={0}>
         <Projects range={[1, 1]} />
-      </RevealFx>
+      </RevealOnScroll>
       {routes["/blog"] && (
         <Column fillWidth gap="24" marginBottom="l">
           <Row fillWidth paddingRight="64">
