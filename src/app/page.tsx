@@ -48,7 +48,7 @@ export default function Home() {
           </Heading>
         }
         subline={
-          <Column gap="8">
+          <Column gap="8" horizontal="center" align="center">
             <Text onBackground="neutral-weak" variant="body-default-l">
               Développeur Web & Product Designer
             </Text>

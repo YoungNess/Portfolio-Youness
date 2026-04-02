@@ -12,7 +12,7 @@ interface HeroSectionProps {
 
 export function HeroSection({ headline, subline, badge, cta }: HeroSectionProps) {
   return (
-    <div style={{ width: "100%", maxWidth: "720px", padding: "80px 0 40px" }}>
+    <div style={{ width: "100%", maxWidth: "720px", padding: "80px 0 40px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
       {badge && (
         <motion.div
           initial={{ opacity: 0 }}
@@ -25,7 +25,7 @@ export function HeroSection({ headline, subline, badge, cta }: HeroSectionProps)
       )}
 
       {/* Headline — clipReveal depuis le bas */}
-      <div style={{ overflow: "hidden", marginBottom: "32px" }}>
+      <div style={{ overflow: "hidden", marginBottom: "32px", width: "100%" }}>
         <motion.div
           initial={{ y: "100%" }}
           animate={{ y: "0%" }}
