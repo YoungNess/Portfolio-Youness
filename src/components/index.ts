@@ -9,3 +9,4 @@ export { ScrollToHash } from "@/components/ScrollToHash";
 export { ThemeToggle } from "@/components/ThemeToggle";
 export { CustomMDX } from "@/components/mdx";
 export { GrainOverlay } from "@/components/GrainOverlay";
+export { CustomCursor } from "@/components/CustomCursor";
